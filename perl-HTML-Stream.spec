@@ -15,7 +15,6 @@ Url:		http://search.cpan.org/dist/%{module}/
 BuildRequires:	perl-devel
 %endif
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 The HTML::Stream module provides you with an object-oriented (and subclassable)
