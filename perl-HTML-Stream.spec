@@ -1,7 +1,7 @@
 %define module	HTML-Stream
 %define name	perl-%{module}
-%define version	1.55
-%define release %mkrel 3
+%define version	1.58
+%define release %mkrel 1
 
 Name:		%{name}
 Version:	%{version}
@@ -9,11 +9,9 @@ Release:	%{release}
 Summary:	HTML output stream class, and some markup utilities
 Group:		Development/Perl
 License:	GPL or Artistic
-Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module/HTML/%{module}-%{version}.tar.bz2
 Url:		http://search.cpan.org/dist/%{module}/
-%if %{mdkversion} < 1010
-BuildRequires:	perl-devel
-%endif
+Source:         http://www.cpan.org/modules/by-module/HTML/%{module}-%{version}.tar.gz
+BuildRequires:	perl(Test::Output)
 BuildArch:	noarch
 BuildRoot:	%{_tmppath}/%{name}-%{version}
 
