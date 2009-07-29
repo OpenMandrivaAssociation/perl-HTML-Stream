@@ -1,19 +1,19 @@
-%define module	HTML-Stream
-%define name	perl-%{module}
-%define version	1.60
-%define release %mkrel 1
+%define upstream_name	 HTML-Stream
+%define upstream_version 1.60
 
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:	HTML output stream class, and some markup utilities
+License:	GPL+ or Artistic
 Group:		Development/Perl
-License:	GPL or Artistic
-Url:		http://search.cpan.org/dist/%{module}/
-Source:         http://www.cpan.org/modules/by-module/HTML/%{module}-%{version}.tar.gz
+Url:		http://search.cpan.org/dist/%{upstream_name}/
+Source0:    http://www.cpan.org/modules/by-module/HTML/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildRequires:	perl(Test::Output)
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 The HTML::Stream module provides you with an object-oriented (and subclassable)
@@ -25,7 +25,7 @@ There's even a small built-in subclass, HTML::Stream::Latin1, which can handle
 Latin-1 input right out of the box. But all in good time...
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -46,4 +46,3 @@ rm -rf %{buildroot}
 %doc COPYING README README.system docs examples testin
 %{perl_vendorlib}/HTML
 %{_mandir}/*/*
-
