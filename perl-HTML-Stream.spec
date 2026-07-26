@@ -1,15 +1,13 @@
 %define upstream_name	 HTML-Stream
-%define upstream_version 1.60
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	5
+Version:	1.60
+Release:	6
 
 Summary:	HTML output stream class, and some markup utilities
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/HTML-Stream
-Source0:	https://cpan.metacpan.org/authors/id/D/DS/DSTAAL/HTML-Stream-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/D/DS/DSTAAL/HTML-Stream-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -26,7 +24,7 @@ There's even a small built-in subclass, HTML::Stream::Latin1, which can handle
 Latin-1 input right out of the box. But all in good time...
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -47,9 +45,7 @@ make test
 %changelog
 * Wed Jul 29 2009 Jérôme Quelin <jquelin@mandriva.org> 1.600.0-1mdv2010.0
 + Revision: 403259
-- rebuild using %%perl_convert_version
-
-* Sun Aug 10 2008 Guillaume Rousse <guillomovitch@mandriva.org> 1.60-1mdv2009.0
+- rebuild using %1.60 Sun Aug 10 2008 Guillaume Rousse <guillomovitch@mandriva.org> 1.60-1mdv2009.0
 + Revision: 270386
 - update to new version 1.60
 
