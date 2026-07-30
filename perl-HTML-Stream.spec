@@ -1,13 +1,14 @@
 %define upstream_name	 HTML-Stream
+%define upstream_version 1.60
 Name:		perl-%{upstream_name}
 Version:	1.60
-Release:	6
+Release:	1
 
 Summary:	HTML output stream class, and some markup utilities
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/HTML-Stream
-Source0:	https://cpan.metacpan.org/authors/id/D/DS/DSTAAL/HTML-Stream-%{version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/D/DS/DSTAAL/HTML-Stream-1.60.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -41,41 +42,4 @@ make test
 %{perl_vendorlib}/HTML
 %{_mandir}/*/*
 
-
-%changelog
-* Wed Jul 29 2009 Jérôme Quelin <jquelin@mandriva.org> 1.600.0-1mdv2010.0
-+ Revision: 403259
-- rebuild using %1.60 Sun Aug 10 2008 Guillaume Rousse <guillomovitch@mandriva.org> 1.60-1mdv2009.0
-+ Revision: 270386
-- update to new version 1.60
-
-* Fri Aug 08 2008 Thierry Vignaud <tvignaud@mandriva.com> 1.59-2mdv2009.0
-+ Revision: 268522
-- rebuild early 2009.0 package (before pixel changes)
-
-* Mon Jun 02 2008 Guillaume Rousse <guillomovitch@mandriva.org> 1.59-1mdv2009.0
-+ Revision: 214415
-- update to new version 1.59
-
-* Fri May 30 2008 Guillaume Rousse <guillomovitch@mandriva.org> 1.58-1mdv2009.0
-+ Revision: 213369
-- new version
-
-* Thu Dec 20 2007 Olivier Blin <oblin@mandriva.com> 1.55-3mdv2008.1
-+ Revision: 135847
-- restore BuildRoot
-
-  + Thierry Vignaud <tvignaud@mandriva.com>
-    - kill re-definition of %%buildroot on Pixel's request
-
-* Sat Sep 15 2007 Guillaume Rousse <guillomovitch@mandriva.org> 1.55-3mdv2008.0
-+ Revision: 86472
-- rebuild
-
-
-* Thu Aug 31 2006 Guillaume Rousse <guillomovitch@mandriva.org> 1.55-2mdv2007.0
-- Rebuild
-
-* Sun Apr 16 2006 Guillaume Rousse <guillomovitch@mandriva.org> 1.55-1mdk
-- first mdk release
 
