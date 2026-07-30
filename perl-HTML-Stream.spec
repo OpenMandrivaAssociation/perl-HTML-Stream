@@ -2,7 +2,7 @@
 %define upstream_version 1.60
 Name:		perl-%{upstream_name}
 Version:	1.60
-Release:	3
+Release:	4
 
 Summary:	HTML output stream class, and some markup utilities
 License:	GPL+ or Artistic
